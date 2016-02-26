@@ -35,5 +35,15 @@ td {
   padding: 10px;
 }
 .sortByPrice {
-  float: right; 
+  float: right;
+}
+.cartShoppingBag {
+  background: white;
+}
+.orderTotal {
+  float: right;
+  display: inline-block;
+}
+.myShoppingBag {
+  display: inline-block;
 }

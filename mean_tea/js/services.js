@@ -121,5 +121,21 @@ app.service('Teas', function(){
         "__v": 0,
         "categories": ["spring", "warm","winter"]
     }
-]
+];
+
+var cart = [];
+this.cart = cart; 
+this.add = function(quantity) {
+  var item = {};
+  item.name = this.tea.name
+  item.ingredients = this.tea.ingredients
+  item.caffeineScale = this.tea.caffeineScale
+  item.price = this.tea.price
+  item.imageUrl = this.tea.imageUrl
+  item.categories = this.tea.categories
+  item.quantity = quantity;
+  cart.push(item)
+  console.log(cart);
+}
+
 })
