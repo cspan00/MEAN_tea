@@ -36,6 +36,24 @@
       <p>
         <strong>Price:</strong> {{tea.price/100 | currency }}
       </p>
+      <p>
+        <strong>Ingredients:</strong> {{tea.ingredients}}
+      </p>
+      <p>
+        <strong>Caffine Scale:</strong> {{tea.caffeineScale}}
+      </p>
+      <p>
+        <strong>Rating:</strong> {{tea.rating}}
+      </p>
+      <p>
+        <strong>In Stock?:</strong> {{tea.inStock}}
+      </p>
+      <p>
+        <strong>Categories:</strong>
+        <ul>
+          <li ng-repeat="category in tea.categories">{{category}}</li>
+        </ul>
+      </p>
     </td>
 </tr>
 </table>
