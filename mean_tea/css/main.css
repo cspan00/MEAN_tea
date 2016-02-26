@@ -50,3 +50,11 @@ td {
 td {
   vertical-align: top;
 }
+.editButton {
+  background: #F0AD4E;
+  color: white;
+}
+.removeButton {
+  background: #E26D5F; 
+  color: white;
+}
