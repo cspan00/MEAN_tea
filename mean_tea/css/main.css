@@ -14,5 +14,14 @@ body {
   font-style: italic;
 }
 .navbar-brand {
-  font-size: 12px; 
+  font-size: 12px;
+}
+.searchOptionsArea {
+  background: white;
+}
+.checkoutButton {
+  float: right;
+  background: #E26D5F;
+  color: white;
+  margin-top: 0; 
 }

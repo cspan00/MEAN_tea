@@ -1,1 +1,41 @@
-<p>{{test}}</p>
+<nav class="navbar-default searchOptionsArea">
+  Search by Category:
+  <select ng-model="category">
+    <option value="dark">dark</option>
+    <option value="cold">cold</option>
+    <option value="awesome">awesome</option>
+    <option value="dry">dry</option>
+    <option value="hot">hot</option>
+    <option value="summer">summer</option>
+    <option value="lucid">lucid</option>
+    <option value="warm">warm</option>
+    <option value="winter">winter</option>
+    <option value="spring">spring</option>
+  </select>
+
+  Search by Name:
+  <input type="text" ng-model="searchByName">
+  <button type="button" class="btn btn-default navbar-btn checkoutButton">Checkout | Bag: !</button>
+</nav>
+
+<table>
+  <tr ng-repeat="tea in teas">
+    <td class="media-left">
+      <img class="teaImage" src="{{tea.imageUrl}}" alt="tea picture">
+    </td>
+    <td>
+      <h3> {{tea.name}}
+        <span class="pull-right">
+          Quantity:
+          <select ng-model="quanitity">
+            <option ng-repeat="qty in [2,3,4,5,6,7,8,9,10]">{{qty}}</option>
+          </select>
+          <button type="button" name="button" class="btn btn-warning" ng-click="teas.addToBag(tea, quantity)">Add To Bag</button>
+        </span>
+      </h3>
+      <p>
+        <strong>Price:</strong> {{tea.price/100 | currency }}
+      </p>
+    </td>
+</tr>
+</table>
