@@ -1,37 +1,40 @@
+<nav class="navbar-default ">
+  <h3 class="myShoppingBag">My Shopping Bag</h3>
+  <h4> Order total:</h4>
+</nav>
 <table>
   <thead>
-    <nav class="navbar-default ">
-      <h2 class="myShoppingBag">My Shopping Bag</h2>
-      <h3 class="orderTotal">Order total: </h3>
-    </nav>
-  </thead>
+     <tr>
+       <th>Product</th>
+       <th>Quantity</th>
+       <th>Sub-total</th>
+       <th></th>
+     </tr>
+   </thead>
   <tr ng-repeat="item in cart">
     <td class="media-left">
       <h3>{{item.name}}</h3>
       <img class="itemImage" src="{{item.imageUrl}}" alt="item picture">
-    </td>
-    <td>
       <p>
-        <strong>Price:</strong> {{item.price/100 | currency }}
+        <strong>Caffine Scale:</strong> {{item.caffeineScale}}
       </p>
       <p>
         <strong>Ingredients:</strong> {{item.ingredients}}
       </p>
       <p>
-        <strong>Caffine Scale:</strong> {{item.caffeineScale}}
-      </p>
-      <p>
         <strong>Rating:</strong> {{item.rating}}
       </p>
-      <p>
-        <strong>In Stock?:</strong> {{item.inStock}}
-      </p>
-      <p>
-        <strong>Categories:</strong>
-        <ul>
-          <li ng-repeat="category in item.categories">{{category}}</li>
-        </ul>
-      </p> -->
-    <!-- </td>
+    </td>
+    <td>
+      {{item.quantity}}
+    </td>
+    <td>
+      {{item.price/100 * item.quantity | currency}}
+    </td>
+    <td>
+      <p type="button" class="btn btn-default navbar-btn editButton" ng-click="">Edit</p>
+      <!-- <select ng-show="toggleEdit"></select> -->
+      <p type="button" class="btn btn-default navbar-btn removeButton" ng-click="">Remove</p>
+    </td>
 </tr>
 </table>

@@ -124,7 +124,7 @@ app.service('Teas', function(){
 ];
 
 var cart = [];
-this.cart = cart; 
+this.cart = cart;
 this.add = function(quantity) {
   var item = {};
   item.name = this.tea.name
@@ -138,4 +138,10 @@ this.add = function(quantity) {
   console.log(cart);
 }
 
+// this.total = function(cart){
+// }
+
+// this.remove = function(){
+//   console.log(this);
+// }
 })

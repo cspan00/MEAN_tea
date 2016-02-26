@@ -16,7 +16,7 @@
 
   Search by Name:
   <input type="text" ng-model="searchByName">
-  <a href="#/cart" type="button" class="btn btn-default navbar-btn checkoutButton">Checkout | Bag: !</a>
+  <a href="#/cart" type="button" class="btn btn-default navbar-btn checkoutButton">Checkout | Bag: {{cart.length}} !</a>
 </nav>
 
 <table>
@@ -42,7 +42,7 @@
         <span class="pull-right">
           Quantity:
           <select ng-model="quantity">
-            <option ng-selected="selected" ng-repeat="qty in [1,2,3,4,5,6,7,8,9,10]">{{qty}}</option>
+            <option ng-repeat="qty in [1,2,3,4,5,6,7,8,9,10]">{{qty}}</option>
           </select>
           <button type="button" name="button" class="btn btn-warning" ng-click="add(quantity)">Add To Bag</button>
         </span>
