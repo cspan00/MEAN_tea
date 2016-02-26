@@ -47,3 +47,6 @@ td {
 .myShoppingBag {
   display: inline-block;
 }
+td {
+  vertical-align: top;
+}
