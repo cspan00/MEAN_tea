@@ -1,3 +1,3 @@
-app.controller('MainController', ['$scope', function($scope){
-      $scope.test='HTML and Routes Working'
+app.controller('MainController', ['$scope', 'Teas', function($scope, Teas){
+      $scope.test= Teas.teas
     }])
