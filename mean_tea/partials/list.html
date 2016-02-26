@@ -1,6 +1,7 @@
 <nav class="navbar-default searchOptionsArea">
   Search by Category:
   <select ng-model="category">
+    <option value="">all</option>
     <option value="dark">dark</option>
     <option value="cold">cold</option>
     <option value="awesome">awesome</option>
@@ -31,7 +32,7 @@
        </th>
      </tr>
    </thead>
-  <tr ng-repeat="tea in teas | orderBy:sortBy">
+  <tr ng-repeat="tea in teas | orderBy:sortBy | filter: searchByName | filter: category">
     <td class="media-left">
       <img class="teaImage" src="{{tea.imageUrl}}" alt="tea picture">
     </td>
