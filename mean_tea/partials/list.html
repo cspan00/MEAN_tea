@@ -19,7 +19,19 @@
 </nav>
 
 <table>
-  <tr ng-repeat="tea in teas">
+  <thead>
+     <tr>
+       <th>Tea</th>
+       <th>Information
+         <span>Sort By Price</span>
+         <select ng-model = 'sortBy'>
+           <option value = '-price'>high to low</option>
+           <option value= '+price'>low to high</option>
+         </select>
+       </th>
+     </tr>
+   </thead>
+  <tr ng-repeat="tea in teas | orderBy:sortBy">
     <td class="media-left">
       <img class="teaImage" src="{{tea.imageUrl}}" alt="tea picture">
     </td>
