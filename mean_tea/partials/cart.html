@@ -1,6 +1,6 @@
 <nav class="navbar-default ">
   <h3 class="myShoppingBag">My Shopping Bag</h3>
-  <h4 class="orderTotal"> Order total:</h4>
+  <h4 class="orderTotal"> Order total: {{grandTotal}}</h4>
 </nav>
 <table>
   <thead>
@@ -29,7 +29,7 @@
       {{item.quantity}}
     </td>
     <td>
-      {{item.price/100 * item.quantity | currency}}
+      {{item.total | currency}}
     </td>
     <td>
       <p type="button" class="btn btn-default navbar-btn editButton" ng-click="">Edit</p>

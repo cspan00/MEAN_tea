@@ -10,5 +10,5 @@ var app = angular.module('mean_teaApp', ['ngRoute'])
 					templateUrl: '../partials/cart.html',
 					controller: 'CartController'
 				})
-				.otherwise({redirectTo : '/'})
+				.otherwise({redirectTo : '/partials/list.html'})
 		})

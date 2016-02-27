@@ -133,9 +133,10 @@ this.add = function(quantity) {
   item.price = this.tea.price
   item.imageUrl = this.tea.imageUrl
   item.categories = this.tea.categories
+  item.rating = this.tea.rating
+  item.total = this.tea.price/100 * quantity
   item.quantity = quantity;
   cart.push(item)
-  console.log(cart);
 }
 
 // this.total = function(cart){
