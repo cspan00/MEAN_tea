@@ -139,9 +139,6 @@ this.add = function(quantity) {
   cart.push(item)
 }
 
-// this.total = function(cart){
-// }
-
 // this.remove = function(){
 //   console.log(this);
 // }
