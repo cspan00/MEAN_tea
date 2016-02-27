@@ -25,8 +25,6 @@ app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
         $scope.cart.splice(index, 1);
       }
 
-      // need to change price when remove item from cart
-
       // $scope.toggleEdit = function(){
         // $scope.toggleEdit = !$scope.toggleEdit;
       // }

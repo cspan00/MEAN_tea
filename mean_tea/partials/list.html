@@ -16,7 +16,7 @@
 
   Search by Name:
   <input type="text" ng-model="searchByName">
-  <a href="#/cart" type="button" class="btn btn-default navbar-btn checkoutButton">Checkout | Bag: <ng-pluralize count='cart.length' when="{'0': 'Empty', '1': '1 Item', 'other': '{{cart.length}} Items'}"> </ng-pluralize>!
+  <a href="#/cart" type="button" class="btn btn-default navbar-btn checkoutButton">Checkout | Bag: <ng-pluralize count='cart.length' when="{'0': 'Empty!', '1': '(1) Item', 'other': '({{cart.length}}) Items'}"> </ng-pluralize>
   </a>
 
 </nav>
