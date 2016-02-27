@@ -26,13 +26,19 @@
       </p>
     </td>
     <td>
-      {{item.quantity}}
+      <span ng-hide="hideQty">{{item.quantity}}</span>
+      <span ng-show="showEdit">
+        Quantity:
+        <select ng-model="quantity">
+          <option ng-repeat="qty in [1,2,3,4,5,6,7,8,9,10]">{{qty}}</option>
+        </select>
+      </span>
     </td>
     <td>
       {{item.total | currency}}
     </td>
     <td>
-      <p type="button" class="btn btn-default navbar-btn editButton" ng-click="">Edit</p>
+      <p type="button" class="btn btn-default navbar-btn editButton" ng-click="toggleEdit()">Edit</p>
       <!-- <select ng-show="toggleEdit"></select> -->
       <p type="button" class="btn btn-default navbar-btn removeButton" ng-click="remove($index)">Remove</p>
     </td>

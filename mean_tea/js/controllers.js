@@ -6,6 +6,7 @@ app.controller('MainController', ['$scope', 'Teas', function($scope, Teas){
 
 app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
       $scope.cart = Teas.cart;
+      $scope.showEdit = false;
 
       $scope.grandTotal = function () {
         var cartTotalArray = []
@@ -25,7 +26,9 @@ app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
         $scope.cart.splice(index, 1);
       }
 
-      // $scope.toggleEdit = function(){
-        // $scope.toggleEdit = !$scope.toggleEdit;
-      // }
+      $scope.toggleEdit = function() {
+        $scope.showEdit = !$scope.showEdit
+        $scope.hideQty = !$scope.hideQty
+      }
+
     }]);
