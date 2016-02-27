@@ -1,6 +1,6 @@
 <nav class="navbar-default cartNavBar">
   <h3 class="myShoppingBag">My Shopping Bag</h3>
-  <h4 class="orderTotal"> Order total: {{grandTotal}}</h4>
+  <h4 class="orderTotal"> Order total: {{grandTotal()}}</h4>
 </nav>
 <table>
   <thead>
@@ -34,7 +34,7 @@
     <td>
       <p type="button" class="btn btn-default navbar-btn editButton" ng-click="">Edit</p>
       <!-- <select ng-show="toggleEdit"></select> -->
-      <p type="button" class="btn btn-default navbar-btn removeButton" ng-click="">Remove</p>
+      <p type="button" class="btn btn-default navbar-btn removeButton" ng-click="remove($index)">Remove</p>
     </td>
 </tr>
 </table>

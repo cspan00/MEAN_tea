@@ -6,9 +6,8 @@ app.controller('MainController', ['$scope', 'Teas', function($scope, Teas){
 
 app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
       $scope.cart = Teas.cart;
-      $scope.grandTotal = grandTotal();
 
-      function grandTotal() {
+      $scope.grandTotal = function () {
         var cartTotalArray = []
         for (var i = 0; i < Teas.cart.length; i++) {
           var cartTotal = Teas.cart[i].total
@@ -17,12 +16,18 @@ app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
         }
         if(grandTotal === undefined) {
           return '$0.00'
-        } else
+        } else {
           return '$' + parseFloat(grandTotal).toFixed(2);
+        }
       };
+
+      $scope.remove = function (index) {
+        $scope.cart.splice(index, 1);
+      }
+
+      // need to change price when remove item from cart
 
       // $scope.toggleEdit = function(){
         // $scope.toggleEdit = !$scope.toggleEdit;
       // }
-
     }]);
