@@ -38,6 +38,10 @@ app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
         $scope.hideSave = !$scope.hideSave
       }
 
+      $scope.toggleSave = function() {
+        $scope.showSave = !$scope.showSave
+      }
+
 
 
     }]);

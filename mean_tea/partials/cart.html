@@ -36,8 +36,8 @@
       {{item.total | currency}}
     </td>
     <td>
-      <p type="button" class="btn btn-default navbar-btn editButton" ng-click="toggleEdit()" ng-hide="hideSave">Edit</p>
-      <p type="button" class="btn btn-default navbar-btn editButton" ng-show="showEdit">Save</p>
+      <p type="button" class="btn btn-default navbar-btn editButton" ng-click="toggleEdit()" ng-hide="hideQty">Edit</p>
+      <p type="button" class="btn btn-default navbar-btn editButton" ng-show="showEdit" ng-click="toggleSave()">Save</p>
       <!-- <select ng-show="toggleEdit"></select> -->
       <p type="button" class="btn btn-default navbar-btn removeButton" ng-click="remove($index)">Remove</p>
     </td>
