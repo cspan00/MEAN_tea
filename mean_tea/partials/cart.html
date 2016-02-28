@@ -29,7 +29,7 @@
       <span ng-hide="hideQty">{{item.quantity}}</span>
       <span ng-show="showEdit">
         Quantity:
-        <select ng-model="quantity">
+        <select ng-model="editQuantity" ng-change = "updateQuantity(editQuantity)">
           <option ng-repeat="qty in [1,2,3,4,5,6,7,8,9,10]">{{qty}}</option>
         </select>
       </span>

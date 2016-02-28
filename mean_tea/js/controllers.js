@@ -2,14 +2,16 @@ app.controller('MainController', ['$scope', 'Teas', function($scope, Teas){
       $scope.teas = Teas.teas;
       $scope.add = Teas.add;
       $scope.cart = Teas.cart;
-    }]);
+     }]);
 
 app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
       $scope.cart = Teas.cart;
       $scope.showEdit = false;
 
+
       $scope.grandTotal = function () {
         var cartTotalArray = []
+
         for (var i = 0; i < Teas.cart.length; i++) {
           var cartTotal = Teas.cart[i].total
           cartTotalArray.push(cartTotal)
@@ -29,6 +31,11 @@ app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
       $scope.toggleEdit = function() {
         $scope.showEdit = !$scope.showEdit
         $scope.hideQty = !$scope.hideQty
+      }
+
+      $scope.updateQuantity = function(editQuantity){
+        this.item.quantity = editQuantity
+        this.item.total = this.item.price/100 * editQuantity
       }
 
     }]);
