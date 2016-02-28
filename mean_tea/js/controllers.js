@@ -7,28 +7,34 @@ app.controller('MainController', ['$scope', 'Teas', function($scope, Teas){
 app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
       $scope.cart = Teas.cart;
       $scope.showEdit = false;
+      // $scope.quantity = Teas.cart.quantity
 
-      $scope.grandTotal = function () {
+      // gets grand total
+      $scope.total = function () {
         var cartTotalArray = []
         for (var i = 0; i < Teas.cart.length; i++) {
           var cartTotal = Teas.cart[i].total
           cartTotalArray.push(cartTotal)
-          var grandTotal = cartTotalArray.reduce((prev, curr) => prev + curr);
+          var total = cartTotalArray.reduce((prev, curr) => prev + curr);
         }
-        if(grandTotal === undefined) {
+        if(total === undefined) {
           return '$0.00'
         } else {
-          return '$' + parseFloat(grandTotal).toFixed(2);
+          return '$' + parseFloat(total).toFixed(2);
         }
       };
 
+      // remove item from cart
       $scope.remove = function (index) {
         $scope.cart.splice(index, 1);
       }
 
+      // show edit quantity select box
       $scope.toggleEdit = function() {
         $scope.showEdit = !$scope.showEdit
         $scope.hideQty = !$scope.hideQty
       }
+
+
 
     }]);

@@ -135,11 +135,8 @@ this.add = function(quantity) {
   item.categories = this.tea.categories
   item.rating = this.tea.rating
   item.total = this.tea.price/100 * quantity
-  item.quantity = quantity;
+  item.quantity = parseFloat(quantity);
   cart.push(item)
 }
 
-// this.remove = function(){
-//   console.log(this);
-// }
 })
