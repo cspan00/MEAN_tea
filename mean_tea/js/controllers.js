@@ -7,7 +7,9 @@ app.controller('MainController', ['$scope', 'Teas', function($scope, Teas){
 app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
       $scope.cart = Teas.cart;
       $scope.showEdit = false;
-      // $scope.quantity = Teas.cart.quantity
+
+      // update quantity
+
 
       // gets grand total
       $scope.total = function () {
@@ -33,6 +35,7 @@ app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
       $scope.toggleEdit = function() {
         $scope.showEdit = !$scope.showEdit
         $scope.hideQty = !$scope.hideQty
+        $scope.hideSave = !$scope.hideSave
       }
 
 

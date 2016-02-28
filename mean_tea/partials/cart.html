@@ -28,7 +28,7 @@
     </td>
     <td>
       <span type="number" ng-hide="hideQty">{{item.quantity}}</span>
-      <span ng-show="showEdit">
+      <span ng-show="showEdit" ng-model="quantity">
         <input type="number" ng:model="item.quantity" ng:required class="showEditQuantityBox">
       </span>
     </td>
@@ -36,7 +36,8 @@
       {{item.total | currency}}
     </td>
     <td>
-      <p type="button" class="btn btn-default navbar-btn editButton" ng-click="toggleEdit()">Edit</p>
+      <p type="button" class="btn btn-default navbar-btn editButton" ng-click="toggleEdit()" ng-hide="hideSave">Edit</p>
+      <p type="button" class="btn btn-default navbar-btn editButton" ng-show="showEdit">Save</p>
       <!-- <select ng-show="toggleEdit"></select> -->
       <p type="button" class="btn btn-default navbar-btn removeButton" ng-click="remove($index)">Remove</p>
     </td>
