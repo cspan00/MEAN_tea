@@ -38,8 +38,23 @@ app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
         $scope.hideSave = !$scope.hideSave
       }
 
-      $scope.toggleSave = function() {
-        $scope.showSave = !$scope.showSave
+      $scope.saveEdit = function() {
+        // $scope.showSave = !$scope.showSave
+        $scope.total = function () {
+          var cartTotalArray = []
+          for (var i = 0; i < Teas.cart.length; i++) {
+            var cartTotal = Teas.cart[i].total
+            cartTotalArray.push(cartTotal)
+            var total = cartTotalArray.reduce((prev, curr) => prev + curr);
+          }
+          if(total === undefined) {
+            return '$0.00'
+          } else {
+            return '$' + parseFloat(total).toFixed(2);
+          }
+          return total
+        };
+
       }
 
 
