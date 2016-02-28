@@ -1,6 +1,6 @@
 <nav class="navbar-default cartNavBar">
   <h3 class="myShoppingBag">My Shopping Bag</h3>
-  <h4 class="orderTotal"> Order total: {{total()}} {{updateCart()}}</h4>
+  <h4 class="orderTotal"> Order total: {{total()}}</h4>
 </nav>
 <table>
   <thead>
@@ -29,7 +29,6 @@
     <td>
       <span ng-hide="hideQty">{{item.quantity}}</span>
       <span ng-show="showEdit">
-        Quantity:
         <select ng-model="editQuantity" ng-change = "updateQuantity(editQuantity)">
           <option ng-repeat="qty in [1,2,3,4,5,6,7,8,9,10]">{{qty}}</option>
         </select>
@@ -40,7 +39,7 @@
     </td>
     <td>
       <p type="button" class="btn btn-default navbar-btn editButton" ng-click="toggleEdit()" ng-hide="hideQty">Edit</p>
-      <p type="button" class="btn btn-default navbar-btn editButton" ng-show="showEdit" ng-click="updateCart(qty)">Save</p>
+      <p type="button" class="btn btn-default navbar-btn editButton" ng-show="showEdit" ng-click="toggleEdit()" >Save</p>
       <!-- <select ng-show="toggleEdit"></select> -->
       <p type="button" class="btn btn-default navbar-btn removeButton" ng-click="remove($index)">Remove</p>
     </td>
