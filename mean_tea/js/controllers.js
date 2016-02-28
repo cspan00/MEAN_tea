@@ -36,11 +36,10 @@ app.controller('CartController', ['$scope', 'Teas', function($scope, Teas){
         $scope.hideSave = !$scope.hideSave
       }
 
-      $scope.updateCart = function(qty) {
-        // $scope.showSave = !$scope.showSave
-        console.log(qty);
-      }
-
-
+      // updates quantity
+      $scope.updateQuantity = function(editQuantity){
+       this.item.quantity = editQuantity
+       this.item.total = this.item.price/100 * editQuantity
+     }
 
     }]);

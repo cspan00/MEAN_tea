@@ -127,16 +127,17 @@ var cart = [];
 this.cart = cart;
 this.add = function(quantity) {
   var item = {};
-  item.name = this.tea.name
-  item.ingredients = this.tea.ingredients
-  item.caffeineScale = this.tea.caffeineScale
-  item.price = this.tea.price
-  item.imageUrl = this.tea.imageUrl
-  item.categories = this.tea.categories
-  item.rating = this.tea.rating
-  item.total = this.tea.price/100 * quantity
+  item.name = this.tea.name;
+  item.ingredients = this.tea.ingredients;
+  item.caffeineScale = this.tea.caffeineScale;
+  item.price = this.tea.price;
+  item.imageUrl = this.tea.imageUrl;
+  item.categories = this.tea.categories;
+  item.rating = this.tea.rating;
+  item.total = this.tea.price/100 * quantity;
   item.quantity = parseFloat(quantity);
   cart.push(item)
 }
+
 
 })
