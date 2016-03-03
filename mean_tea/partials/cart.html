@@ -1,6 +1,7 @@
 <nav class="navbar-default cartNavBar">
   <h3 class="myShoppingBag">My Shopping Bag</h3>
-  <h4 class="orderTotal"> Order total: {{total()}}</h4>
+  <h4 class="orderTotal"> Order total: {{total()}}
+  <a href = 'http://www.paypal.com' class = 'btn btn-default'> Checkout!</a></h4>
 </nav>
 <table>
   <thead>
@@ -32,11 +33,6 @@
       <span ng-hide="hideQty">{{item.quantity}}</span>
       <span ng-show="showEdit">
         Quantity:
-        <select ng-model="editQuantity" ng-change = "updateQuantity(editQuantity)">
-
-      <span type="number" ng-hide="hideQty">{{item.quantity}}</span>
-        <select ng-show="showEdit" ng-model="qty">
-
       <span ng-hide="hideQty">{{item.quantity}}</span>
       <span ng-show="showEdit">
         <select ng-model="editQuantity" ng-change = "updateQuantity(editQuantity)">
